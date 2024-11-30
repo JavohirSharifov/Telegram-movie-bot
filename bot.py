@@ -1,28 +1,14 @@
-import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
-# Function to handle the "/start" command
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await update.message.reply_text("Hello! How are you? How can I help you? I'm ready to assist you with anything you want on Telegram.")
+# Insert your bot token directly here
+BOT_TOKEN = "7522348429:AAFI6DVMFtnuekHUF-YbOnyUWdSPzvM6miU"
 
-# Main function to run the bot
-def main():
-    # Get the bot token from environment variables
-    TOKEN = os.getenv("7522348429:AAFI6DVMFtnuekHUF-YbOnyUWdSPzvM6miU")
-    if not TOKEN:
-        print("Error: 7522348429:AAFI6DVMFtnuekHUF-YbOnyUWdSPzvM6miU is not set in environment variables.")
-        return
-    
-    # Initialize the bot application
-    application = ApplicationBuilder().token(TOKEN).build()
-
-    # Add the "/start" command handler
-    application.add_handler(CommandHandler("start", start))
-
-    # Start the bot
-    print("Bot is running...")
-    application.run_polling()
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("Hello! How are you? How can I help you?")
 
 if __name__ == "__main__":
-    main()
+    # Pass the token directly to the ApplicationBuilder
+    application = ApplicationBuilder().token(BOT_TOKEN).build()
+    application.add_handler(CommandHandler("start", start))
+    application.run_polling()
