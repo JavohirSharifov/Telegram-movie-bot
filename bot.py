@@ -5,10 +5,12 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, fil
 BOT_TOKEN = "7522348429:AAFI6DVMFtnuekHUF-YbOnyUWdSPzvM6miU"
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Hello my name is Javohir, how can I help you?")
+    await update.message.reply_text("👋 Assalomu alaykum, botimizga xush kelibsiz.
+
+✍🏻 Kino kodini yuboring.   ")
 
 async def reply_nothing_found(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Nothing found")
+    await update.message.reply_text("Ushbu kino mavjud emas")
 
 if __name__ == "__main__":
     # Set up the application with the bot token
