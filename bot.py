@@ -9,9 +9,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 # Main function to run the bot
 def main():
     # Get the bot token from environment variables
-    TOKEN = os.getenv("7522348429:AAE39Kw9yMSZP4XYgcEfNeunzBP04w8ylTs")
+    TOKEN = os.getenv("7522348429:AAFI6DVMFtnuekHUF-YbOnyUWdSPzvM6miU")
     if not TOKEN:
-        print("Error: 7522348429:AAE39Kw9yMSZP4XYgcEfNeunzBP04w8ylTs is not set in environment variables.")
+        print("Error: 7522348429:AAFI6DVMFtnuekHUF-YbOnyUWdSPzvM6miU is not set in environment variables.")
         return
     
     # Initialize the bot application
